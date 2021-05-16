@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "WZPO.DataAccess": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
