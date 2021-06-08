@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WZPO.DataAccess.Context;
+using WZPO.Services;
 
 namespace WZPO
 {
@@ -29,6 +30,7 @@ namespace WZPO
             services.AddControllers();
 
             services.AddDbContext<CinemaDbContext>();
+            services.AddScoped<ICinemaService, CinemaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
