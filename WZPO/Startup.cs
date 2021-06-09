@@ -31,6 +31,8 @@ namespace WZPO
 
             services.AddDbContext<CinemaDbContext>();
             services.AddScoped<ICinemaService, CinemaService>();
+            services.AddScoped<ICinemaService, CinemaService>();
+            services.AddScoped<ICinemaService, CinemaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

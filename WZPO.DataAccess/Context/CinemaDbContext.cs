@@ -27,5 +27,16 @@ namespace WZPO.DataAccess.Context
         {
             base.OnModelCreating(builder);
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                try
+                {
+                   optionsBuilder.UseSqlServer("Server=localhost;Database=WZPO;Trusted_Connection=True;");
+                }
+                catch { }
+            }
+        }
     }
 }
